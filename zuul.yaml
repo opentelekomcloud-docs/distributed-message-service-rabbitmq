@@ -1,8 +1,13 @@
+---
 - project:
     merge-mode: squash-merge
     default-branch: main
     templates:
-      - helpcenter-base-jobs
+      - helpcenter-base-jobs-no-check
+    vars:
+      sphinx_pdf_files:
+        - dms_rabbitmq-umn.pdf
+        - dms_rabbitmq-api-ref.pdf
     check:
       jobs:
         - noop
